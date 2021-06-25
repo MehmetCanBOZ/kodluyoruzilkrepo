@@ -1,0 +1,36 @@
+body,header{
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_name{
+    color: red;
+  
+}
+
+main{
+margin: 0 auto;
+width:70%;  
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.main_title{
+    color: burlywood;
+}
+#product_name{
+    color: red;
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    margin-right: 2rem;
+    list-style-type: none;
+
+}
