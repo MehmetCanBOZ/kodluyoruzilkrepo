@@ -2,9 +2,9 @@ const list = document.getElementById("list");
 const toasterClose = document.getElementById("close")
 const toast = document.getElementById("liveToast");
 const toastInfo = document.getElementById("toast-info");
-var tasklist;
-if(localStorage.tasklist){
-    var tasklist = JSON.parse(window.localStorage.getItem("tasklister"))
+
+if(localStorage.tasklister){
+    var tasklist = JSON.parse(localStorage.getItem("tasklister"))
 }else{
     var tasklist = []
 }
@@ -37,7 +37,7 @@ function newElement(){
         }
         
         li.append(spanClose);
-        tasklist.push(li);
+        tasklist.push(task.value);
         window.localStorage.setItem("tasklister",JSON.stringify(tasklist));
         list.append(li);
         toester(info)
@@ -60,3 +60,33 @@ toasterClose.onclick = () =>{
 }
 
 
+function createTask(tasklist){
+    tasklist.forEach(element => {
+        console.log(element);
+        const li = document.createElement("li");
+        const spanClose = document.createElement("span");
+        li.textContent = element;
+
+        li.onclick = (e) =>{
+            if(e.currentTarget.classList.contains("checked")){
+                e.currentTarget.classList.remove("checked")
+            }else{
+                e.currentTarget.classList.add("checked")
+            }
+        }
+        
+        spanClose.innerHTML = "x"
+        spanClose.classList.add("close");
+        
+        spanClose.onclick = (e) => {
+            const index = tasklist.indexOf(e.target.parentElement);
+            tasklist.splice(index,1);
+            window.localStorage.setItem("tasklister",JSON.stringify(tasklist));
+            e.target.parentElement.remove();
+        }
+        
+        li.append(spanClose);
+        list.append(li);
+    });
+}
+createTask(tasklist)
