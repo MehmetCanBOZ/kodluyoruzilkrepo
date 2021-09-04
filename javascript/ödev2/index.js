@@ -8,7 +8,7 @@ if(localStorage.tasklister){
 }else{
     var tasklist = []
 }
-console.log(tasklist);
+
 function newElement(){
     const task = document.getElementById("task");
     
@@ -79,7 +79,10 @@ function createTask(tasklist){
         spanClose.classList.add("close");
         
         spanClose.onclick = (e) => {
-            const index = tasklist.indexOf(e.target.parentElement);
+            console.log(e);
+            console.log("fsfdsf");
+            const index = tasklist.indexOf(e.target.parentElement.innerText);
+            console.log(index);
             tasklist.splice(index,1);
             window.localStorage.setItem("tasklister",JSON.stringify(tasklist));
             e.target.parentElement.remove();
