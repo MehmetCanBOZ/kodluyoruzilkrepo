@@ -19,3 +19,10 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 
 ![Todo](https://github.com/MehmetCanBOZ/kodluyoruzilkrepo/blob/main/react/odev2/src/assests/img/todo.JPG)
+
+## ACTIVE
+![Todo](https://github.com/MehmetCanBOZ/kodluyoruzilkrepo/blob/main/react/odev2/src/assests/img/active.png)
+
+
+## COMPLETED
+![Todo](https://github.com/MehmetCanBOZ/kodluyoruzilkrepo/blob/main/react/odev2/src/assests/img/completed.png)
