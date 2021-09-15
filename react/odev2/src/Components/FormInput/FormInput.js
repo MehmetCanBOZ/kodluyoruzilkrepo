@@ -19,7 +19,6 @@ function FormInput() {
             tasks:[...prev.tasks,{"task":e.target.task.value,"isDone":false}]
         }
       })
-
     }
     e.target.task.value = "";
     
@@ -35,9 +34,9 @@ function FormInput() {
         tasks:prev.tasks.map((item) => 
         {
           if(prev.isAllDone){
-           return {...item,isDone:true}
+           return {...item,isDone:false}
           }else{
-            return {...item,isDone:false}
+            return {...item,isDone:true}
           }
         }
         ),
@@ -89,7 +88,7 @@ function FormInput() {
     <div className="form-input">
       <h1>TODOS</h1>
       <div className="form-top">
-        <button id="completeAll" className = {taskList?.isAllDone ? "grayColor" : "blackColor" } onClick = { e => CompleteAll(e)}>❯</button>
+        <button id="completeAll" className = {taskList?.isAllDone ? "blackColor" : "grayColor" } onClick = { e => CompleteAll(e)}>❯</button>
         <form onSubmit = {(e) => submitTask(e)}>
           <input type="text" name="task" id="taskInfo" placeholder="What needs to be done?"/>
         </form>  
