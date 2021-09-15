@@ -1,0 +1,45 @@
+@import "../../assests/sass/index.scss";
+.form-input{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 550px;
+    box-shadow: 1px 6px 35px 6px rgba(44,102,97,0.58);
+    h1{
+        margin-bottom: 10px;
+    }
+}
+.form-top{
+    display: flex;
+    align-items: center;
+    border: 1px solid $borderColor;
+    form,input{
+        width: 100%;
+    }
+    
+    button{
+        border: none;
+        background-color: white;
+        padding: 5px 15px;
+        transform: rotate(90deg);
+        font-size: 1.25rem;
+    }
+}
+#taskInfo{
+    padding: 10px 10px;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    &::placeholder{
+        color: rgb(145, 139, 139);
+        opacity: 0.7;
+    }
+}
+.grayColor{
+    color: $borderColor;
+}
+.blackColor{
+    color: black;
+}
+

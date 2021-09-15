@@ -1,0 +1,17 @@
+@import "../../assests/sass/index.scss";
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding:5px;
+    border: 1px solid $borderColor;
+    button{
+        border: none;
+        background-color: white;
+        border: 1px solid transparent;
+        &:hover{
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+    }
+    
+}
