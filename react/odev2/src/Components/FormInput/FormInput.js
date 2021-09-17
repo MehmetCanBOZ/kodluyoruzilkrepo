@@ -9,14 +9,14 @@ function FormInput() {
   const {taskList, SetTaskList} = useContext(MainContext);
   
   const [showingList,SetShowingList] = useState(taskList.tasks);
-
+  var tempTaskList = [...taskList.tasks];
   const submitTask = (e) => {
     e.preventDefault();
     if(e.target.task.value != ""){
       SetTaskList((prev) => {
         return {
             isAllDone:prev.isAllDone,
-            tasks:[...prev.tasks,{"task":e.target.task.value,"isDone":false}]
+            tasks:[{"task":e.target.task.value,"isDone":false},...prev.tasks]
         }
       })
     }
@@ -50,7 +50,6 @@ function FormInput() {
   }  
 
   const showActive = () =>{
-    var tempTaskList = [...taskList.tasks];
     tempTaskList = tempTaskList.filter((item) => {
       if(!item.isDone){
         return item;
@@ -60,7 +59,6 @@ function FormInput() {
   } 
 
   const showCompleted = () =>{
-    var tempTaskList = [...taskList.tasks];
     tempTaskList = tempTaskList.filter((item) => {
       if(item.isDone){
         return item;
@@ -70,7 +68,6 @@ function FormInput() {
   }
 
   const clearAllCompleted = () =>{
-    var tempTaskList = [...taskList.tasks];
     tempTaskList = tempTaskList.filter((item) => {
       if(!item.isDone){
         return item;
@@ -83,7 +80,7 @@ function FormInput() {
       }
     })
   }
-
+  console.log("formInput");
   return (
     <div className="form-input">
       <h1>TODOS</h1>

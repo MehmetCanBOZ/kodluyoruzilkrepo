@@ -4,10 +4,7 @@ import TaskItem from '../TaskItem/TaskItem';
 import {MainContext, useContext} from "../../context";
 
 function List( {list}) {
-  const {taskList, SetTaskList} = useContext(MainContext);
-  
-
-
+  console.log("listİTem");
   return (
     <div className="list-wrapper">
     {

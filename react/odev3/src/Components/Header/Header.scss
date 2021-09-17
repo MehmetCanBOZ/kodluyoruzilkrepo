@@ -1,0 +1,31 @@
+.header{
+    background-color: rgb(151, 230, 239);
+    padding: 20px 30px;
+    margin: 20px auto;
+    width: 80%;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .population,.longitude,.region{
+        width: 250px;
+        font-size: 1.1rem;
+        height: 60px;
+        border-radius: 15px;
+        color: white;
+        text-align: center;
+        background-color: rgb(46, 123, 135);
+        &:hover{
+            background-color: white;
+            color:rgb(46, 123, 135) ;
+        }
+    }
+    #citySelector{
+        width: 180px;
+        height: 30px;
+        font-size: 1.25rem;
+        border-radius: 5px;
+        outline: none;
+    }
+}
+
