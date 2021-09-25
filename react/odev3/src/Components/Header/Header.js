@@ -95,7 +95,7 @@ const Header = () => {
                 <option value="81">Düzce</option>
             </select>
             <div className="population">
-              <p>Population: <span>{cityData[cityId-1].population}</span></p>
+              <p>Populations: <span>{cityData[cityId-1].population}</span></p>
             </div>
             <div className="longitude">
               <p>lat: <span>{cityData[cityId-1].latitude}</span> lon: <span>{cityData[cityId-1].longitude}</span></p>
